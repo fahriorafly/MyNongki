@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/listFragment">
+
+    <fragment
+        android:id="@+id/listFragment"
+        android:name="org.d3if0093.mynongki.ui.list.ListFragment"
+        android:label="MyNongki"
+        tools:layout="@layout/fragment_list" >
+        <action
+            android:id="@+id/action_listFragment_to_aboutFragment"
+            app:destination="@id/aboutFragment" />
+        <action
+            android:id="@+id/action_listFragment_to_tambahFragment"
+            app:destination="@id/tambahFragment" />
+        <action
+            android:id="@+id/action_listFragment_to_contentFragment"
+            app:destination="@id/contentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="org.d3if0093.mynongki.ui.about.TentangFragment"
+        android:label="Tentang"
+        tools:layout="@layout/fragment_tentang" >
+        <action
+            android:id="@+id/action_aboutFragment_to_listFragment"
+            app:destination="@id/listFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/tambahFragment"
+        android:name="org.d3if0093.mynongki.ui.tambah.TambahFragment"
+        android:label="Tambah Tempat Nongki"
+        tools:layout="@layout/fragment_tambah" >
+        <action
+            android:id="@+id/action_tambahFragment_to_listFragment"
+            app:destination="@id/listFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/contentFragment"
+        android:name="org.d3if0093.mynongki.ui.content.ContentFragment"
+        android:label="fragment_content"
+        tools:layout="@layout/fragment_content" >
+        <action
+            android:id="@+id/action_contentFragment_to_listFragment"
+            app:destination="@id/listFragment" />
+        <argument android:name="currentList"
+            app:argType="org.d3if0093.mynongki.db.entity.MyEntity" />
+    </fragment>
+</navigation>

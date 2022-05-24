@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">MyNongki</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="name_view_content">Warung</string>
+    <string name="address_view_content">Address</string>
+    <string name="desc_view_content">Description</string>
+    <string name="about_desc">About Deskripsi</string>
+    <string name="about_created">About Created</string>
+    <string name="tambah">Tambah</string>
+    <string name="name">Nama</string>
+    <string name="address">Alamat</string>
+    <string name="number">Nomor</string>
+    <string name="description">Deskripsi</string>
+    <string name="about">Tentang</string>
+    <string name="delete">Hapus</string>
+    <string name="share">Bagikan</string>
+    <string name="template">
+        Nama: %1$s\n
+        Alamat: %2$s\n
+        Deskripsi: %3$s\n
+    </string>
+    <string name="mode_gelap">Mode Gelap</string>
+</resources>
