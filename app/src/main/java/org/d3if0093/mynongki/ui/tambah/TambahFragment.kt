@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Switch
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import org.d3if0093.mynongki.R
@@ -25,6 +26,7 @@ class TambahFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
+
     ): View? {
         // Inflate the layout for this fragment
         binding = FragmentTambahBinding.inflate(inflater, container, false)
@@ -32,11 +34,17 @@ class TambahFragment : Fragment() {
         binding.inputBtn.setOnClickListener{
             tambahData()
         }
+
+        binding.switch1.setOnCheckedChangeListener { _, isChecked ->
+            if (isChecked)
+                AppCompatDelegate.setDefaultNightMode( AppCompatDelegate.MODE_NIGHT_YES)
+            else
+                AppCompatDelegate.setDefaultNightMode( AppCompatDelegate.MODE_NIGHT_NO)
+        }
         return binding.root
     }
 
     private fun tambahData(){
-        val btn = binding.switchTheme.
 
         val name = binding.editTxtName.text.toString()
         val address = binding.editTxtAddress.text.toString()
@@ -48,7 +56,7 @@ class TambahFragment : Fragment() {
             viewModel.tambahData(data)
             findNavController().navigate(R.id.action_tambahFragment_to_listFragment)
         } else {
-            Toast.makeText(requireContext(), "!", Toast.LENGTH_SHORT).show()
+            Toast.makeText(requireContext(), "Isi semua data!", Toast.LENGTH_SHORT).show()
         }
     }
 }

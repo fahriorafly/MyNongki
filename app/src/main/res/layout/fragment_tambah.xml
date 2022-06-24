@@ -116,11 +116,13 @@
         app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
     <Switch
-        android:id="@+id/switchTheme"
+        android:id="@+id/switch1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/mode_gelap"
-        tools:ignore="UseSwitchCompactOrMaterialXml"
-        tools:layout_editor_absoluteX="108dp"
-        tools:layout_editor_absoluteY="0dp" />
+        android:minHeight="48dp"
+        android:text="Mode Gelap"
+        tools:layout_editor_absoluteX="40dp"
+        tools:layout_editor_absoluteY="40dp" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
